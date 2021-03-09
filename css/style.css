@@ -1,11 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-}
-
 .button {
     width: 100%;
     margin: 15px 0;
@@ -43,8 +38,8 @@ body {
     margin: 0;
     line-height: 1;
     -webkit-text-size-adjust: none;
-    -ms-overflow-style: scrollbar;
     background: #fff;
+    overflow-x: hidden;
 }
 
 html,
@@ -205,11 +200,11 @@ table {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0 0 -1px -2em;
+    flex-direction: row;
+    display:flex;
 }
 
 .row>* {
-    float: left;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1612,7 +1607,7 @@ button:disabled {
 }
 
 #three {
-    padding: 93px 0 57px 0;
+    padding: 70px 0 50px 0;
 }
 
 #imvtu {
@@ -1672,9 +1667,10 @@ button:disabled {
 .cell {
     min-height: 75px;
     flex-grow: 1;
-    flex-basis: 100%;
+    position: relative;
 }
-
+.half {
+}
 #iq8iz {
     max-width: 1400px;
 }
@@ -1954,23 +1950,6 @@ button:disabled {
     margin-top: -25px;
 }
 
-#il33wk {
-    max-width: 43%;
-    padding: 0 10px 0 10px;
-    margin: 0 1% 0 5%;
-    flex-basis: 400px;
-}
-
-#ic66qf {
-    display: inline;
-}
-
-#izmfwk {
-    max-width: 43%;
-    padding: 0 10px 0 10px;
-    margin: 0 5% 0 1%;
-}
-
 #ims2c9 {
     position: relative;
     width: 980px;
@@ -2241,18 +2220,35 @@ button:disabled {
 #ibk6sl {
     margin: 0 0 10px 0;
 }
+body {
+    overflow-x: hidden;
+}
 
-#ipo67x {
-    color: black;
-    float: none;
-    height: 400px;
-    display: block;
+#skirt {
     position: absolute;
+    max-width: 400px;
     transform: rotateX(198deg) rotateY(-8deg) rotateZ(9deg) scaleX(1) scaleY(1) scaleZ(1);
     opacity: 0.95;
-    flex-direction: row;
-    left: 80%;
+    right:-15px;
 }
+@media only screen and (max-device-width: 1000px) {
+    #skirt {
+        opacity: 0; 
+        visibility: hidden;
+    }    
+}
+@media only screen and (max-device-width: 1200px) {
+    #skirt {
+        max-width:200px;
+    }    
+}
+
+@media only screen and (max-device-width: 1400px) {
+    #skirt {
+        max-width:300px;
+    }    
+}
+
 
 #iad94 {
     display: inline-block;
